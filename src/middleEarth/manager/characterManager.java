@@ -18,6 +18,8 @@ public class characterManager {
 	}
 	
 	private void resizeArray() {
-		
+		middleEarthCharacter[] newArray = new middleEarthCharacter[chracters.length * 2];
+		System.arraycopy(characters, 0, newArray, 0, characters.length);
+		characters = newArray;
 	}
 }

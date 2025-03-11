@@ -2,7 +2,7 @@ package middleEarth.manager;
 
 public class characterManager {
 	private middleEarthCharacter[] characters;
-	private int sie;
+	private int size;
 	
 	public characterManager() {
 		this.characters = new middleEarthCharacter[5];

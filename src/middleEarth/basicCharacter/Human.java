@@ -2,7 +2,7 @@ package middleEarth.basicCharacter;
 
 public class Human extends characterAbstract{
 	public Human(String name, double health, double power) {
-        super(name, health, power);
+        super();
     }
 
     @Override

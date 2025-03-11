@@ -2,7 +2,7 @@ package middleEarth.basicCharacter;
 
 public class Elf extends characterAbstract{
 	public Elf(String name, double health, double power) {
-        super(name, health, power);
+        super();
     }
 
     @Override

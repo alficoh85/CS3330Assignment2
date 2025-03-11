@@ -2,7 +2,7 @@ package middleEarth.basicCharacter;
 
 public class Orc extends characterAbstract{
 	public Orc(String name, double health, double power) {
-        super(name, health, power);
+        super();
     }
 
     @Override

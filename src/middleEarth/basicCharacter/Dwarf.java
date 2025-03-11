@@ -2,7 +2,7 @@ package middleEarth.basicCharacter;
 
 public class Dwarf extends characterAbstract{
 	public Dwarf(String name, double health, double power) {
-        super(name, health, power);
+        super();
     }
 
     @Override

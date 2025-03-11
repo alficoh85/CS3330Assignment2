@@ -2,7 +2,7 @@ package middleEarth.basicCharacter;
 
 public class Wizard extends characterAbstract{
 	public Wizard(String name, double health, double power) {
-        super(name, health, power);
+        super();
     }
 
     @Override

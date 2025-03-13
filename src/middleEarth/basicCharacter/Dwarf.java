@@ -1,10 +1,21 @@
 package middleEarth.basicCharacter;
 
-public class Dwarf extends MiddleEarthCharacter{
+public class Dwarf extends MiddleEarthCharacter {
+	/**
+	 * Parameterized constructor for Dwarf
+	 * @param name
+	 * @param health
+	 * @param power
+	 */
 	public Dwarf(String name, double health, double power) {
         super();
     }
 
+	/**
+	 * Method that attacks as a dwarf
+	 * @param target
+	 * @return
+	 */
     @Override
     public boolean attack(MiddleEarthCharacter target) {
         if (target instanceof Dwarf || target instanceof Wizard) {
@@ -16,6 +27,10 @@ public class Dwarf extends MiddleEarthCharacter{
         return true;
     }
 
+	/**
+	 * Method that returns that the character is a dwarf
+	 * @return
+	 */
     @Override
     public String getRace() {
         return "Dwarf";

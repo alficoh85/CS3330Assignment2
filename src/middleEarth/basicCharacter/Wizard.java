@@ -1,12 +1,12 @@
 package middleEarth.basicCharacter;
 
-public class Wizard extends characterAbstract{
+public class Wizard extends MiddleEarthCharacter{
 	public Wizard(String name, double health, double power) {
         super();
     }
 
     @Override
-    public boolean attack(characterAbstract target) {
+    public boolean attack(MiddleEarthCharacter target) {
         if (target instanceof Wizard || target instanceof Human) {
             return false; 
         }

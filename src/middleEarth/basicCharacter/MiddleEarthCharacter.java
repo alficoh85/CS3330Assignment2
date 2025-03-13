@@ -1,7 +1,7 @@
 package middleEarth.basicCharacter;
 
 
-public abstract class characterAbstract {
+public abstract class MiddleEarthCharacter {
 	protected String name;
 	protected double health;
 	protected double power;
@@ -12,7 +12,7 @@ public abstract class characterAbstract {
 		this.power = power;
 	}
 	
-	public abstract boolean attack(characterAbstract target);
+	public abstract boolean attack(MiddleEarthCharacter target);
 	public abstract String getRace();
 	
 	public void displayInfo() {

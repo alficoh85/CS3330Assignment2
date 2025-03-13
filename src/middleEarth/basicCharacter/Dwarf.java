@@ -1,12 +1,12 @@
 package middleEarth.basicCharacter;
 
-public class Dwarf extends characterAbstract{
+public class Dwarf extends MiddleEarthCharacter{
 	public Dwarf(String name, double health, double power) {
         super();
     }
 
     @Override
-    public boolean attack(characterAbstract target) {
+    public boolean attack(MiddleEarthCharacter target) {
         if (target instanceof Dwarf || target instanceof Wizard) {
             return false; 
         }

@@ -1,21 +1,21 @@
 package middleEarth.manager;
 
-public class middleEarthCouncil {
-	private static middleEarthCouncil instance;
-	private characterManager characterManager;
+public class MiddleEarthCouncil {
+	private static MiddleEarthCouncil instance;
+	private CharacterManager characterManager;
 	
-	private middleEarthCouncil() {
-		characterManager = new characterManager();
+	private MiddleEarthCouncil() {
+		characterManager = new CharacterManager();
 	}
 	
-	public static middleEarthCouncil getInstance() {
+	public static MiddleEarthCouncil getInstance() {
 		if(instance == null) {
-			instance = new middleEarthCouncil();
+			instance = new MiddleEarthCouncil();
 		}
 		return instance;
 	}
 	
-	public characterManager getCharacterManager() {
+	public CharacterManager getCharacterManager() {
 		return characterManager;
 	}
 }

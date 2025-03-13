@@ -1,5 +1,5 @@
 package middleEarth.main;
 
-public class oopApp {
+public class Menu {
 
 }

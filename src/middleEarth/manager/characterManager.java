@@ -1,17 +1,17 @@
 package middleEarth.manager;
 
-import middleEarth.basicCharacter.characterAbstract;
+import middleEarth.basicCharacter.MiddleEarthCharacter;
 
-public class characterManager {
-	private characterAbstract[] characters;
+public class CharacterManager {
+	private MiddleEarthCharacter[] characters;
 	private int size;
 	
-	public characterManager() {
-		this.characters = new characterAbstract[5];
+	public CharacterManager() {
+		this.characters = new MiddleEarthCharacter[5];
 		this.size = 0;
 	}
 	
-	public boolean addCharacter(characterAbstract c) {
+	public boolean addCharacter(MiddleEarthCharacter c) {
 		if(size == characters.length) {
 			resizeArray();
 		}
@@ -20,12 +20,12 @@ public class characterManager {
 	}
 	
 	private void resizeArray() {
-		characterAbstract[] newArray = new characterAbstract[characters.length * 2];
+		MiddleEarthCharacter[] newArray = new MiddleEarthCharacter[characters.length * 2];
 		System.arraycopy(characters, 0, newArray, 0, characters.length);
 		characters = newArray;
 	}
 	
-	public characterAbstract getCharacter(String name) {
+	public MiddleEarthCharacter getCharacter(String name) {
 		for(int i=0; i<size;i++) {
 			if(characters[i].getName().equals(name)) {
 				return characters[i];
@@ -35,7 +35,7 @@ public class characterManager {
 	}
 	
 	public boolean updateCharacter(String name, double health, double power) {
-		characterAbstract character = getCharacter(name);
+		MiddleEarthCharacter character = getCharacter(name);
 		if(character != null) {
 			character.setHealth(health);
 			character.setPower(power);
@@ -64,8 +64,8 @@ public class characterManager {
 		}
 	}
 	
-	public characterAbstract[] getAllCharacters() {
-		characterAbstract[]activeCharacters = new characterAbstract[size];
+	public MiddleEarthCharacter[] getAllCharacters() {
+		MiddleEarthCharacter[]activeCharacters = new MiddleEarthCharacter[size];
 		System.arraycopy(characters, 0, activeCharacters, 0, size);
 		return activeCharacters;
 	}

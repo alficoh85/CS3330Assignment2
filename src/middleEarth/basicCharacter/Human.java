@@ -1,10 +1,21 @@
 package middleEarth.basicCharacter;
 
 public class Human extends MiddleEarthCharacter{
+	/**
+	 * Parameterized constructor for human
+	 * @param name
+	 * @param health
+	 * @param power
+	 */
 	public Human(String name, double health, double power) {
         super();
     }
 
+	/**
+	 * Method that attacks as a human
+	 * @param target
+	 * @return
+	 */
     @Override
     public boolean attack(MiddleEarthCharacter target) {
         if (target instanceof Human || target instanceof Orc) {
@@ -16,6 +27,10 @@ public class Human extends MiddleEarthCharacter{
         return true;
     }
 
+    /**
+	 * Method that returns the String "Human"
+	 * @return
+	 */
     @Override
     public String getRace() {
         return "Human";

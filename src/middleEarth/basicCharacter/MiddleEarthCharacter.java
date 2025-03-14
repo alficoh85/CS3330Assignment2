@@ -69,6 +69,14 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	/**
+	 * Mutator method for name
+	 * @param name
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
 	 * Mutator method for health
 	 * @param health
 	 */

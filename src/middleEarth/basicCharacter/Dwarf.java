@@ -28,7 +28,7 @@ public class Dwarf extends MiddleEarthCharacter {
     }
 
 	/**
-	 * Method that returns that the character is a dwarf
+	 * Method that returns the String "Dwarf"
 	 * @return
 	 */
     @Override

@@ -8,7 +8,7 @@ public class Orc extends MiddleEarthCharacter{
 	 * @param power
 	 */
 	public Orc(String name, double health, double power) {
-        super();
+        super(name, power, power);
     }
 
 	/**

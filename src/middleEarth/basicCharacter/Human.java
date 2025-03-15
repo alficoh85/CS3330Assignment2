@@ -8,7 +8,7 @@ public class Human extends MiddleEarthCharacter{
 	 * @param power
 	 */
 	public Human(String name, double health, double power) {
-        super();
+        super(name, power, power);
     }
 
 	/**

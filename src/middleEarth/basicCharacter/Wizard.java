@@ -8,7 +8,7 @@ public class Wizard extends MiddleEarthCharacter{
 	 * @param power
 	 */
 	public Wizard(String name, double health, double power) {
-        super();
+        super(name, power, power);
     }
 
 	/**

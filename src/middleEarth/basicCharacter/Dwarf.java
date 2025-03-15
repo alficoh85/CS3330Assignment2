@@ -8,7 +8,7 @@ public class Dwarf extends MiddleEarthCharacter {
 	 * @param power
 	 */
 	public Dwarf(String name, double health, double power) {
-        super();
+        super(name, power, power);
     }
 
 	/**

@@ -15,7 +15,7 @@ public abstract class MiddleEarthCharacter {
 	 * @param health
 	 * @param power
 	 */
-	public void middleEarthCharacter(String name, double health, double power) {
+	public MiddleEarthCharacter(String name, double health, double power) {
 		this.name = name;
 		this.health = health;
 		this.power = power;

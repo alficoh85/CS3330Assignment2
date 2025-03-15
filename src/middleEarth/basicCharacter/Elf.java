@@ -8,7 +8,7 @@ public class Elf extends MiddleEarthCharacter{
 	 * @param power
 	 */
 	public Elf(String name, double health, double power) {
-        super();
+        super(name, power, power);
     }
 
 	/**

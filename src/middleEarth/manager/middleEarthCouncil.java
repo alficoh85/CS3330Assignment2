@@ -1,21 +1,35 @@
 package middleEarth.manager;
 
-public class middleEarthCouncil {
-	private static middleEarthCouncil instance;
-	private characterManager characterManager;
+public class MiddleEarthCouncil {
+	/**
+	 * Instance variables for the MiddleEarthCouncil Singleton class
+	 */
+	private static MiddleEarthCouncil instance;
+	private CharacterManager characterManager;
 	
-	private middleEarthCouncil() {
-		characterManager = new characterManager();
+	/**
+	 * Private default constructor to make sure it can only be initialized in the MiddleEarthCouncil itself
+	 */
+	private MiddleEarthCouncil() {
+		characterManager = new CharacterManager();
 	}
 	
-	public static middleEarthCouncil getInstance() {
+	/**
+	 * Method to create and return the MiddleEarthCouncil instance or to return the instance already created
+	 * @return
+	 */
+	public static MiddleEarthCouncil getInstance() {
 		if(instance == null) {
-			instance = new middleEarthCouncil();
+			instance = new MiddleEarthCouncil();
 		}
 		return instance;
 	}
 	
-	public characterManager getCharacterManager() {
+	/**
+	 * Method to return the instance of CharacterManager
+	 * @return
+	 */
+	public CharacterManager getCharacterManager() {
 		return characterManager;
 	}
 }

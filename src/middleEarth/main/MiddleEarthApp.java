@@ -21,14 +21,15 @@ public class MiddleEarthApp {
 			System.out.println("3. Update an existing character");
 			System.out.println("4. Delete an existing character");
 			System.out.println("5. Execute all characters' attack actions");
-			System.out.println("6. Exit");
+			System.out.println("6. Exit\n\n");
 			choice = input.nextInt();
 			if (choice < 1 || choice > 6) {
-				System.out.println("Invalid input.");
+				System.out.println("Invalid input.\n");
 			}
 			if (choice == 1) {
 				MiddleEarthCharacter characterToAdd = null;
 				System.out.println("Please enter the name of the character you want to add: ");
+				input.nextLine();
 				String addName = input.nextLine();
 				System.out.println("Please enter the number of the race of the character you would like to add. ");
 				System.out.println("1. Dwarf");
@@ -76,6 +77,7 @@ public class MiddleEarthApp {
 			}
 			if (choice == 3) {
 				System.out.println("Please enter the name of the existing character you would like to update: ");
+				input.nextLine();
 				String characterNameToUpdate = input.nextLine();
 				System.out.println("Please enter the name you would like to update to (enter current name to keep name as is): ");
 				String updateName = input.nextLine();
@@ -93,6 +95,7 @@ public class MiddleEarthApp {
 				}
 			}
 			if (choice == 4) {
+				input.nextLine();
 				System.out.println("Please enter the name of the existing character you would like to delete: ");
 				String deleteName = input.nextLine();
 				MiddleEarthCharacter characterToDelete = manager.getCharacter(deleteName);
@@ -105,7 +108,32 @@ public class MiddleEarthApp {
 				}
 			}
 			if (choice == 5) {
-				
+				input.nextLine();
+				MiddleEarthCharacter[] characterArray = manager.getAllCharacters();
+				if (characterArray.length > 1) {
+					for (int i = 0; i<characterArray.length; i++) {
+						System.out.println("Please enter the name of the character for " + characterArray[i].getName() + " to attack: ");
+						String victimName = input.nextLine();
+						boolean victimFound = false;
+						for (int j = 0; j<characterArray.length && victimFound == false; j++) {
+							if (i != j) {
+								if (victimName.equals(characterArray[j].getName())) {
+									characterArray[i].attack(characterArray[j]);
+									victimFound = true;
+								}
+							}
+						}
+						if (victimFound == false) {
+							System.out.println("Attack failed. Please input the name of a valid character to attack.");
+						}
+					}
+					for (int k = 0; k<characterArray.length; k++) {
+						manager.updateCharacter(characterArray[k], characterArray[k].getName(), characterArray[k].getHealth(), characterArray[k].getPower());
+					}
+				}
+				else {
+					System.out.println("Cannot execute attacks, not enough characters.");
+				}
 			}
 			if (choice == 6) {
 				System.out.println("Exiting Middle-earth character manager.");
